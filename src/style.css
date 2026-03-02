@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #4CA30D;
+  --primary-light: #C0FF85;
+  --primary-secondary: #E0FFCD;
+  --primary-tertiary: #FAFEF5;
+  --text: #101828;
+  --text-secondary: #344054;
+  --gray: #898989;
+  --bg: #F5F5F5;
+  --error: #D92D20;
+  --warning: #DC6803;
+  --white: #FFFFFF;
+  --black: #000000;
+  --border: #D0D5DD;
+  --main-bg: #FCFCFD;
+  --orange: #CA8504;
+  --green-dark: #3B7C0F;
+  --tab-color: #EBEBED;
+  --item-bg: #ECFDFF;
+  --item-color: #088AB2;
+  --customer-bg: #F5F3FF;
+  --customer-color: #7839EE;
+  --bill-bg: #FEFBE8;
+  --bill-color: #CA8504;
+  --tasks-bg: #F3FEE7;
+  --tasks-color: #4CA30D;
+  --tools-bg: #FDF2FA;
+  --tools-color: #DD2590;
+  --return-bg: #FFF4ED;
+  --return-color: #E62E05;
+  --red: #F04438;
+  --placeholder: #667085;
+}
+
+html, body { height: 100%; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+#app { height: 100vh; overflow: hidden; }
+
+button { cursor: pointer; font-family: inherit; border: none; outline: none; }
+input { font-family: inherit; outline: none; }
+a { text-decoration: none; color: inherit; }
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+.fade-enter-active, .fade-leave-active { transition: opacity 0.2s ease; }
+.fade-enter-from, .fade-leave-to { opacity: 0; }
+
+.slide-up-enter-active, .slide-up-leave-active { transition: all 0.25s ease; }
+.slide-up-enter-from, .slide-up-leave-to { transform: translateY(16px); opacity: 0; }
+
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex; align-items: flex-end;
+  z-index: 1000;
+}
+.modal-sheet {
+  background: var(--white);
+  width: 100%;
+  border-radius: 24px 24px 0 0;
+  padding: 14px 20px 24px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.sheet-handle {
+  width: 40px; height: 5px;
+  background: var(--border);
+  border-radius: 10px;
+  margin: 0 auto 16px;
+}
